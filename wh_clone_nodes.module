@@ -1,0 +1,17 @@
+<?php
+
+function wh_clone_nodes_entity_operation_alter(array &$operations, \Drupal\Core\Entity\EntityInterface $entity)
+{
+
+    //$operations = [];
+
+    if ($entity instanceof \Drupal\node\Entity\Node) {
+        $operations['clone'] = [
+          'title' => t('Clone'),
+          'url' => \Drupal\Core\Url::fromRoute('wh_clone_nodes',['id' => $entity->id()]),
+          'weight' => 150,
+        ];
+    }
+
+    //return $operations;
+}

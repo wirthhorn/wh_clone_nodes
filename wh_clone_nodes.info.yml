@@ -1,0 +1,5 @@
+name: WH Clone Nodes
+description: 'Creates clone of node.'
+type: module
+core: 8.x
+package: 'Wirth und Horn'
